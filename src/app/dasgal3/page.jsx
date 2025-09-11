@@ -1,17 +1,9 @@
 "use client";
 import { useState } from "react";
+import { DasgalThree } from "./_components/DasgalThree";
 
-export default function Dasgal3() {
+export default function Dasgal3(props) {
   const [bgColor, setBgColor] = useState("white");
 
-  return (
-    <div className="flex gap-5 w-full h-screen items-center justify-center " style={{ backgroundColor: bgColor, minHeight: "100vh" }}>
-      <button className="py-4 px-4 bg-red-600 text-4xl font-bold hover:bg-red-400 hover:text-white" onClick={() => setBgColor("blue")}>
-        Blue
-      </button>
-      <button className="py-4 px-4 bg-red-600 text-4xl font-bold hover:bg-red-400 hover:text-white" onClick={() => setBgColor("green")}>
-        Green
-      </button>
-    </div>
-  );
+  return <DasgalThree bgColor={bgColor} setBgColor={setBgColor} />;
 }

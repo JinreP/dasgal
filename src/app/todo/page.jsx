@@ -16,9 +16,10 @@ export default function Todo() {
     setInputValue(e.target.value);
   }
 
-  function deleteEvent(deleteIndex) {
-    const deleteTask = tasks.filter((task, i) => i !== deleteIndex);
-  }
+  const deleteEvent = (index) => {
+    const deleteTask = tasks.filter((_, i) => i !== index);
+    setTasks(deleteTask);
+  };
   return (
     <div>
       <a href="/">
@@ -48,8 +49,8 @@ export default function Todo() {
             <li key={index} className="flex items-center gap-2">
               <span className="text-4xl border-2 text-gray-400">{task}</span>
               <button
-                onClick={deleteEvent()}
                 className="bg-red-500 h-[45px] w-[100px] text-2xl text-white cursor-pointer rounded-2xl"
+                onClick={() => deleteEvent(index)}
               >
                 delete
               </button>

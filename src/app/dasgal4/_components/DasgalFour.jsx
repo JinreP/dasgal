@@ -6,6 +6,11 @@ export const DasgalFour = (props) => {
   const { studentAge, studentName, handleName, handleAge } = props;
   return (
     <div className=" w-full h-screen flex flex-col gap-5 items-center justify-center ">
+      <a href="/">
+        <button className="bg-red-500 rounded-2xl text-4xl cursor-pointer w-[150px] h-[70px] active:bg-red-300 active:text-whitehover:bg-red-300 hover:text-white">
+          Home
+        </button>
+      </a>
       <input
         type="text"
         className="bg-black w-[250px] h-[50px] text-white"

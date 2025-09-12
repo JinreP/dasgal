@@ -5,6 +5,11 @@ export const DasgalFive = (props) => {
   const { items, inputValue, handleAdd, setInputValue, setItems } = props;
   return (
     <div className="p-4">
+      <a href="/">
+        <button className="bg-red-500 rounded-2xl text-4xl cursor-pointer w-[150px] h-[70px] active:bg-red-300 active:text-whitehover:bg-red-300 hover:text-white">
+          Home
+        </button>
+      </a>
       <h1 className="text-xl font-bold mb-4">Lists</h1>
 
       <input

@@ -92,18 +92,33 @@ export default function News() {
     setProducts(deleteBtn);
   };
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <div className="flex flex-col gap-8">
+    <div className=" bg-gray-100 p-8">
+      <a href="/">
+        <button className="bg-red-500 rounded-2xl text-4xl cursor-pointer mb-5 w-[150px] h-[70px] active:bg-red-300 active:text-whitehover:bg-red-300 hover:text-white">
+          Home
+        </button>
+      </a>
+      <div className="flex flex-col gap-10">
         {products.map((product, index) => {
           return (
             <div
-              className="bg-red-500 text-4xl relative text-white font-bold p-6 rounded-lg"
+              className="bg-red-500 text-4xl relative text-white font-bold p-6 rounded-lg "
               key={product.id}
             >
-              <div className="flex flex-col gap-4">
-                <h1>{product.title}</h1>
-                <h2>{product.date}</h2> <h3>{product.author}</h3>
-                <p>{product.content}</p>
+              <div className="flex gap-4 ">
+                <div className="flex">
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-[350px] h-[300px] object-cover rounded-lg"
+                  />
+                </div>
+                <div className="flex flex-col gap-4">
+                  <h1>{product.title}</h1>
+                  <h2>{product.date}</h2>
+                  <h3>{product.author}</h3>
+                  <p>{product.content}</p>
+                </div>
               </div>
               <button
                 className="bg-blue-500 w-[200px] rounded-2xl absolute right-2 top-0 active:bg-red-300 hover:to-blue-200  h-[60px] text-4xl text-black"

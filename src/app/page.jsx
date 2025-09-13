@@ -37,6 +37,11 @@ export default function Home() {
           Todo test
         </button>
       </a>
-    </div>  
+      <a href="./news">
+        <button className="bg-red-500 rounded-2xl text-4xl cursor-pointer w-[150px] h-[70px] active:bg-red-300 active:text-whitehover:bg-red-300 hover:text-white">
+          news
+        </button>
+      </a>
+    </div>
   );
 }
